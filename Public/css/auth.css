@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: white;
+    width: 380px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input,
+select,
+button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.links {
+    text-align: center;
+}
+
+.links a {
+    text-decoration: none;
+}
