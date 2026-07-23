@@ -14,14 +14,17 @@ if (signInForm) {
     };
 
     try {
-      const response = await fetch("http://127.0.0.1:3000/api/signIn", {
-        method: "POST",
-        credentials: "include",
-        headers: {
-          "Content-Type": "application/json",
+      const response = await fetch(
+        "https://backend-features.onrender.com/api/signIn",
+        {
+          method: "POST",
+          credentials: "include",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(body),
         },
-        body: JSON.stringify(body),
-      });
+      );
 
       const data = await response.json();
       if (response.ok) {
@@ -47,13 +50,16 @@ if (signUpForm) {
     };
 
     try {
-      const response = await fetch("http://127.0.0.1:3000/api/signUp", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const response = await fetch(
+        "https://backend-features.onrender.com/api/signUp",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(body),
         },
-        body: JSON.stringify(body),
-      });
+      );
 
       const data = await response.json();
       console.log(data);
@@ -64,9 +70,12 @@ if (signUpForm) {
 }
 
 async function loadProfile() {
-  const response = await fetch("http://127.0.0.1:3000/api/profile", {
-    credentials: "include",
-  });
+  const response = await fetch(
+    "https://backend-features.onrender.com/api/profile",
+    {
+      credentials: "include",
+    },
+  );
   const user = await response.json();
   document.getElementById("username").textContent = user.userProfile.username;
   document.getElementById("gender").textContent = user.userProfile.gender;

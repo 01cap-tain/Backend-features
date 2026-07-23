@@ -55,6 +55,7 @@ app.use(
     allowedHeaders: ["Content-Type", "Authorization"],
   }),
 );
+app.use(express.static("Public"));
 
 const PORT = 3000;
 
